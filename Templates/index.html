@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html xml:lang>
+<html>
     <head>
         <title style="text-align:center">Vote for the cutest pets!</title> 
     </head>
     <body>
-        <h1 style="text-align:center;">
-            Woo hoo a website
+        <h1 style="text-align:left;">
+            Is this kitty the cutest?
         </h1>
+        <img src="{{ user_image }}" alt="User Image">
+        <input type=checkbox name=catBoxes>
+        <h1 style="text-align:left;">
+            Or is this one??
+        </h1>
+        <img src="{{ user_image }}" alt="User Image">
+        <input type=checkbox name='catBoxes'>
+        <input type="submit" name='submit_button'>
     </body>
 </html>
