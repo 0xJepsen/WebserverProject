@@ -4,16 +4,40 @@
         <title style="text-align:center">Vote for the cutest pets!</title> 
     </head>
     <body>
-        <h1 style="text-align:left;">
-            Is this kitty the cutest?
+        
+                    <!-- HEADER TEXT -->
+        <h1 style="text-align:center;">
+            Hint: the pics are buttons!
         </h1>
-        <img src="{{ user_image }}" alt="User Image">
-        <input type=checkbox name=catBoxes>
-        <h1 style="text-align:left;">
-            Or is this one??
-        </h1>
-        <img src="{{ user_image }}" alt="User Image">
-        <input type=checkbox name='catBoxes'>
-        <input type="submit" name='submit_button'>
+        
+
+                    <!-- VOTING SECTION -->
+        <form method="POST" action="/">
+
+                    <!-- BUTTON 1 -->
+            <button type="submit" value="voteCat1" name="voteCat1">
+
+                    <!-- TEXT 1 -->
+            <h1 style="text-align:middle;">
+                Is this kitty the cutest?
+            </h1>
+
+                    <!-- IMAGE 1 -->
+            <img src="{{ user_image }}" alt="User Image">
+
+
+                    <!-- BUTTON 2 -->
+            <button type="submit" value="voteCat2" name="voteCat2">
+
+                    <!-- TEXT 2 -->
+            <h1 style="text-align:middle;">
+                Or is this one??
+            </h1>
+
+                    <!-- IMAGE 2 -->
+            <img src="{{ user_image2 }}" alt="User Image">
+
+        </form>
+
     </body>
 </html>
