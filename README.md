@@ -18,6 +18,8 @@ Our webserver allows users to vote on cats by choosing the one they think is cut
 Ensure that flask is currently installed
 ```sh
 pip install flask --user
+pip install Flask-WTF
+pip install WTForms
 ```
 Run the program
 ```sh
