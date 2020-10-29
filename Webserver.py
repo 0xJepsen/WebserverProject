@@ -11,16 +11,13 @@ votes = [0, 0]
 
 @app.route("/", methods=['GET', 'POST'])
 def main():
-    print(request.method)
     if request.method=='POST':
         if request.form.get('voteCat1') == 'voteCat1':
-            print("Vote for cat 1")
             votes[0] += 1
-            print(votes[0])
+            print("Votes for cat 1: ", votes[0])
         elif request.form.get('voteCat2') == 'voteCat2':
-            print("Vote fore cat 2")
             votes[1] += 1
-            print(votes[1])
+            print("Votes for cat 2: ", votes[1])
         else: 
             return render_template("index.html")
     elif request.method=='GET':
