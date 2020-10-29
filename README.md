@@ -8,7 +8,9 @@
 
 <!-- DESCRIPTION -->
 ## About The Project
+<<<<<<< HEAD
 Our webserver allows users to vote on cats by choosing the one they think is cutest.
+
 
 
 <!-- USAGE -->
