@@ -10,24 +10,30 @@
             Hint: the pics are buttons!
         </h1>
         
+
                     <!-- VOTING SECTION -->
-        <form method="vote" action="/">
+        <form method="POST" action="/">
+
                     <!-- BUTTON 1 -->
-            <button type="submit" value="voteCat1" name="voteCat1"/>
+            <button type="submit" value="voteCat1" name="voteCat1">
+
                     <!-- TEXT 1 -->
             <h1 style="text-align:middle;">
                 Is this kitty the cutest?
             </h1>
+
                     <!-- IMAGE 1 -->
             <img src="{{ user_image }}" alt="User Image">
 
 
                     <!-- BUTTON 2 -->
-            <button type="submit" value="voteCat2" name="voteCat2"/>
+            <button type="submit" value="voteCat2" name="voteCat2">
+
                     <!-- TEXT 2 -->
             <h1 style="text-align:middle;">
                 Or is this one??
             </h1>
+
                     <!-- IMAGE 2 -->
             <img src="{{ user_image2 }}" alt="User Image">
 

@@ -7,16 +7,20 @@ IMAGES = os.path.join('static', 'images')
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = IMAGES
 
-@app.route("/", methods=['GET', 'VOTE'])
+votes = [0, 0]
+
+@app.route("/", methods=['GET', 'POST'])
 def main():
     print(request.method)
-    if request.method=='VOTE':
+    if request.method=='POST':
         if request.form.get('voteCat1') == 'voteCat1':
             print("Vote for cat 1")
-            #do stuff
+            votes[0] += 1
+            print(votes[0])
         elif request.form.get('voteCat2') == 'voteCat2':
             print("Vote fore cat 2")
-            #do stuff
+            votes[1] += 1
+            print(votes[1])
         else: 
             return render_template("index.html")
     elif request.method=='GET':
