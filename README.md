@@ -6,26 +6,32 @@
   <h3 align="center">Docker Webserver</h3>
 
 
-<!-- DESCRIPTION -->
 ## About The Project
-Our webserver allows users to vote on cats by choosing the one they think is cutest.
+Anarkitty! Order Cloned Kittens
+Our webserver allows people to purchase kittens! Customer may choose from 2 different kitten models. The kittens are clones so customers can buy any number of either of the two kittens. To indicate how many they would like, customers simply click the image of the kitten that many times. We have a database on the back-end which stores how many of each kitten the customer would like to purchase. 
 
 
-<!-- USAGE -->
 ## USAGE
 Ensure that flask is currently installed
 ```sh
 pip install flask --user
 pip install Flask-WTF
-<!-- pip install WTForms -->
 ```
 Run the program
 ```sh
 python3 ./Webserver.py
 ```
+This project runs on port 10001
 
+To send a curl request and see the message printed, do the following
+curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:10001
 
-<-- DOCKER -->
+IN SUMMARY, do the following
+pip install flask --user
+pip install Flask-WTF --user
+python3 ./Webserver.py
+curl -X POST -d "{Wow, this project deserves full credit!}" localhost:10001
+
 ## DOCKER
 TO BE COMPLETED
 

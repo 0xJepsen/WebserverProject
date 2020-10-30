@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from flask_wtf import Form
 import os
 
@@ -9,15 +9,22 @@ app.config['UPLOAD_FOLDER'] = IMAGES
 
 votes = [0, 0]
 
+#@app.route('/foo', methods=['POST'])
+#def foo():
+#    print(request.headers)
+#    data = request.json
+#    return jsonify(data)
+
 @app.route("/", methods=['GET', 'POST'])
 def main():
     if request.method=='POST':
+        print(request.get_data())
         if request.form.get('voteCat1') == 'voteCat1':
             votes[0] += 1
-            print("Votes for cat 1: ", votes[0])
+            print("Number of cat 1: ", votes[0])
         elif request.form.get('voteCat2') == 'voteCat2':
             votes[1] += 1
-            print("Votes for cat 2: ", votes[1])
+            print("Number of cat 2: ", votes[1])
         else: 
             return render_template("index.html")
     elif request.method=='GET':
