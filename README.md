@@ -46,7 +46,7 @@ Run the program
 ```sh
 python3 ./Webserver.py
 ```
-This project runs on port 10001
+This project runs on port 5000
 
 To send a curl request and see the message printed, do the following
 ``` sh
