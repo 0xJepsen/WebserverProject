@@ -50,7 +50,7 @@ This project runs on port 10001
 
 To send a curl request and see the message printed, do the following
 ``` sh
-curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:10001
+curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:5000
 ```
 
 You will recieved an index.html from the curl request with our front end written in html. You should see the message from the curl request in the same terminal that you run the program in. Note you will not see the message when running the project in docker. 
@@ -66,6 +66,9 @@ docker image build -t flaskwebserver .
 ```
 ```sh
 docker run --env FLASK_APP=Webserver.py -p 127.0.0.1:10001:10001 -d flaskwebserver
+```
+``` sh
+curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:10001
 ```
 
 The application will be running on http://0.0.0.0:10001/
