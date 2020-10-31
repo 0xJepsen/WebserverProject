@@ -46,14 +46,14 @@ Run the program
 ```sh
 python3 ./Webserver.py
 ```
-This project runs on port 10001
+This project runs on port 5000
 
 To send a curl request and see the message printed, do the following
 ``` sh
-curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:10001
+curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:5000
 ```
 
-You will recieved an index.html from the curl request with our front end written in html. You should see the message from the curl request in the same terminal that you run the program in. Note you will not see the message when running the project in docker. 
+You will recieve an index.html from the curl request with our front end written in html. You should see the message from the curl request in the same terminal that you run the program in. Note you will not see the message when running the project in docker. 
 
 ## DOCKER
 To run the program in a docker container run the following commands.
@@ -72,6 +72,12 @@ curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:10001
 ```
 
 The application will be running on http://0.0.0.0:10001/
+
+
+To send a curl request to the dockerized webserver use the following command.
+``` sh
+curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:10001
+```
 
 ## Contact
 
