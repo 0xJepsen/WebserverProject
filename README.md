@@ -7,7 +7,7 @@
 
 
 ## About The Project
-Anarkitty! Order Cloned Kittens
+Anarkitty! Order Cloned Kittens      
 Our webserver allows people to purchase kittens! Customer may choose from 2 different kitten models. The kittens are clones so customers can buy any number of either of the two kittens. To indicate how many they would like, customers simply click the image of the kitten that many times. We have a database on the back-end which stores how many of each kitten the customer would like to purchase. 
 
 
@@ -21,16 +21,16 @@ Run the program
 ```sh
 python3 ./Webserver.py
 ```
-This project runs on port 10001
+You MUST make sure that the "templates" folder has a lowercase 't'! If it does not, the CURL request will error. Thus, after opening our project, 'ls' and check. If you see Templates, make sure to: mv Templates/ templates/
 
-To send a curl request and see the message printed, do the following
-curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:10001
+To send a curl request and see the message printed, do the following     
+curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:10001      
 
-IN SUMMARY, do the following
-pip install flask --user
-pip install Flask-WTF --user
-python3 ./Webserver.py
-curl -X POST -d "{Wow, this project deserves full credit!}" localhost:10001
+IN SUMMARY, do the following    
+pip install flask --user   
+pip install Flask-WTF --user    
+python3 ./Webserver.py     
+curl -X POST -d "{Wow, this project deserves full credit}" localhost:10001     
 
 ## DOCKER
 TO BE COMPLETED
