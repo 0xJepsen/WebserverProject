@@ -33,8 +33,19 @@ python3 ./Webserver.py
 curl -X POST -d "{Wow, this project deserves full credit!}" localhost:10001
 
 ## DOCKER
-TO BE COMPLETED
+To run the program in a docker container run the following commands.
 
+```sh
+git clone https://github.com/wjepsen/WebserverProject
+```
+```sh
+docker image build -t flaskwebserver .
+```
+```sh
+docker run --env FLASK_APP=Webserver.py -p 127.0.0.1:10001:10001 -d flaskwebserver
+```
+
+The application will be running on http://0.0.0.0:10001/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

@@ -4,7 +4,7 @@ import os
 
 IMAGES = os.path.join('static', 'images')
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 app.config['UPLOAD_FOLDER'] = IMAGES
 
 votes = [0, 0]
