@@ -46,11 +46,11 @@ Run the program
 ```sh
 python3 ./Webserver.py
 ```
-This project runs on port 5000
+This project runs on port 10001
 
 To send a curl request and see the message printed, do the following
 ``` sh
-curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:5000
+curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:10001
 ```
 
 You will recieve an index.html from the curl request with our front end written in html. You should see the message from the curl request in the same terminal that you run the program in. Note you will not see the message when running the project in docker. 
