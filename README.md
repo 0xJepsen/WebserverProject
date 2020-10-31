@@ -67,12 +67,8 @@ docker image build -t flaskwebserver .
 ```sh
 docker run --env FLASK_APP=Webserver.py -p 127.0.0.1:10001:10001 -d flaskwebserver
 ```
-``` sh
-curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:10001
-```
 
 The application will be running on http://0.0.0.0:10001/
-
 
 To send a curl request to the dockerized webserver use the following command.
 ``` sh
