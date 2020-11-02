@@ -39,45 +39,36 @@ Our project uses a small collection of developer tools to power a world with kit
 ## USAGE
 Ensure that flask is currently installed
 ```sh
-pip install flask --user
-pip install Flask-WTF
+pip3 install Flask --user
+pip3 install Flask-WTF --user
 ```
 Run the program
 ```sh
 python3 ./Webserver.py
 ```
-This project runs on port 10001
+This project runs on port 5000
 
 To send a curl request and see the message printed, do the following
 ``` sh
-curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:10001
+curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:5000
 ```
 
 You will recieve an index.html from the curl request with our front end written in html. You should see the message from the curl request in the same terminal that you run the program in. Note you will not see the message when running the project in docker. 
 
-## DOCKER
-To run the program in a docker container run the following commands.
-
+If, for any reason, you need to clone our gitHub, please use the following
 ```sh
-git clone https://github.com/wjepsen/WebserverProject
+git clone https://github.com/honeybadgerofdoom/cs370_TermProject
 ```
+
+## DOCKER
+Build the docker image
 ```sh
 docker image build -t flaskwebserver .
 ```
+Run the docker container
 ```sh
-docker run --env FLASK_APP=Webserver.py -p 127.0.0.1:10001:10001 -d flaskwebserver
+docker run --env FLASK_APP=Webserver.py -p 127.0.0.1:10007:10007 -d flaskwebserver
 ```
-
-The application will be running on http://0.0.0.0:10001/
-
-To send a curl request to the dockerized webserver use the following command.
-``` sh
-curl -X POST -d "{<YOUR MESSAGE HERE>}" localhost:10001
-```
-
-## Contact
-
-If you would like to provide feedback or order any kittens over the phone please call 1-800-ANARCAT
 
 # Acknowledgements
 
