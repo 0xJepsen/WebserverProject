@@ -1,6 +1,6 @@
 Flask==1.0.2
 Flask-WTF==0.14.2
-werkzeug==0.16.1
+werkzeug==2.2.3
 requests==2.24.0
 pip==21.1
 Jinja2==2.11.3
